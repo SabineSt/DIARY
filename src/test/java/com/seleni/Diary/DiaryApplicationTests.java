@@ -1,3 +1,4 @@
+/*
 package com.seleni.Diary;
 
 import org.junit.Test;
@@ -16,3 +17,4 @@ public class DiaryApplicationTests {
 	}
 
 }
+*/
