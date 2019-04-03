@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Spring Security Tutorial</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<form th:action="@{/registration}" method="get">
+    <button class="btn btn-md btn-warning btn-block" type="Submit">Go To Registration Page</button>
+</form>
+<center>
+<div class="container">
+    <form th:action="@{/login}" method="POST" class="form-signin">
+        <i><h3 class="form-signin-heading" th:text="Welcome"></h3></i>
+        <br/>
+        <div class="form-group col-md-4">
+        <input type="text" id="email" name="email"  th:placeholder="Email"
+               class="form-control" /> <br/>
+        <input type="password"  th:placeholder="Password"
+               id="password" name="password" class="form-control" /> <br />
+        </div>
+        <div align="center" th:if="${param.error}">
+            <p style="font-size: 20; color: #FF1C19;">Email or Password invalid, please verify</p>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block col-md-4" name="Submit" value="Login" type="Submit" th:text="Login"></button>
+    </form>
+</div></center>
+<!--<div th:replace="fragments/JS :: javaScriptAddOns"></div> -->
+
+</body>
+</html>
