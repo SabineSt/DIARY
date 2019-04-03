@@ -10,9 +10,9 @@ script:
 
 
 
-  notifications:
-    slack:
-      rooms:
-        - codingnomads2019:d1aWT8GvnxhOMXgNmiIHV0eJ#java-travis
-      on_success: always
-      on_failure: always
+notifications:
+  slack:
+    rooms:
+      - codingnomads2019:d1aWT8GvnxhOMXgNmiIHV0eJ#java-travis
+    on_success: always
+    on_failure: always
